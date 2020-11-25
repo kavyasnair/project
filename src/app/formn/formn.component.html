@@ -1,20 +1,22 @@
-<link rel="stylesheet" type="text/css" src="formn.component.css">
+
 
 <div class="s1">
-    <h3>Form</h3>
-<form action="#">
-<input type="text" placeholder="Name" class="l1" required><br><br>
+<h3>Form</h3>
+<form  [formGroup]='angForm' (ngSubmit)='onsubmit()'>
+<input type="text" placeholder="Name" class="l1" formControlName="name" required><br><br>
+
 <div class="da">
-<input type="radio" id="male" name="gender" value="male">
-  <label for="male" style="font-size: 15px;">Male</label>
+<input type="radio" id="male" name="gender" value="male" formControlName="gender">
+  <label for="male" >Male</label>
 </div>
 <div class="db" style="margin-left:128px">
-  <input type="radio" id="female" name="gender" value="female" >
-  <label for="female" style="font-size: 15px;">Female</label>
+  <input type="radio" id="female" name="gender"  value="female" formControlName="gender" >
+  <label for="female" >Female</label>
 </div>
-<br><input type="email" placeholder="Email" name="em" class="l1" required ><br><br>
-<input type="text" placeholder="Contact Number" name="cont" class="l1" required><br><br>
-<input type="text" placeholder="Message" name="mes" class="l1"><br><br>
+<br><input type="email" placeholder="Email" name="em" class="l1" formControlName="email"><br><br>
+
+<input type="number" placeholder="Contact Number" name="cont" class="l1" formControlName="number"><br><br>
+<input type="text" placeholder="Message" name="mes" class="l1" formControlName="message"><br><br>
 <button type="submit" >Submit</button>
 </form>
 </div>

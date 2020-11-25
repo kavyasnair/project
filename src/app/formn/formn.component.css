@@ -6,10 +6,10 @@
     font-family: monospace;
     font-size: 20px;
     color: rgb(120,120,120);
-    margin-left: 540px;
+    margin-left: 580px;
     margin-top: 40px;
     width: 250px;
-    height: 350px;
+    height: 400px;
     
 }
 .l1{
@@ -17,23 +17,27 @@
     border-left: none;
     border-right: none;
     outline: none;
+    border-bottom: 5px solid darkgrey;
+
 }
 .da{
     width: 90px;
-    height: 20px;
+    height: 25px;
     margin-left: 30px;
     position: absolute;
+    font-size: 15px;
     border: 1px solid rgb(120,120,120);
 }
 .db{
     width: 90px;
-    height: 20px;
+    height: 25px;
     position: absolute;
     border: 1px solid rgb(120,120,120);
+    font-size: 15px;
 }
 button{border: none;
     border-radius: 25px;
-    padding: 8px 42px;
+    padding: 6px 42px;
     display: inline-block;
     cursor: pointer;
     outline: none;
@@ -43,4 +47,10 @@ button{border: none;
     color: white;
     text-align: center;
     text-decoration: none;
+}
+input.ng-invalid{
+    border-bottom: 5px solid red;
+}
+input.ng-valid{
+    border-bottom: 5px solid green;
 }

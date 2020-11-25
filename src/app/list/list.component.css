@@ -42,7 +42,7 @@ table {
     height: 300px;
     margin-right:100px ;
     margin-top: 43px;
-    padding-bottom: 16px;
+    padding-bottom: 20px;
     padding-left:80px;
     float: right;
 }
@@ -60,10 +60,10 @@ table {
             margin-top: 0px;
             justify-content: center; 
             align-items: center; 
+            
 		} 
-#ic{
-    color: rgb(120,120,120);
-    padding-left: 90px;
-    
-    
+
+#h{
+    margin-left: 50px;
+
 }
