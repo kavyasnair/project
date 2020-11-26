@@ -3,20 +3,22 @@
 <div class="s1">
 <h3>Form</h3>
 <form  [formGroup]='angForm' (ngSubmit)='onsubmit()'>
-<input type="text" placeholder="Name" class="l1" formControlName="name" required><br><br>
-
+<input type="text" placeholder="Name" class="l1" formControlName="name" required><br>
+<span *ngIf="name.invalid && name.touched" id="alert">Name is required</span><br>
 <div class="da">
 <input type="radio" id="male" name="gender" value="male" formControlName="gender">
   <label for="male" >Male</label>
 </div>
-<div class="db" style="margin-left:128px">
+<div class="db" >
   <input type="radio" id="female" name="gender"  value="female" formControlName="gender" >
   <label for="female" >Female</label>
-</div>
-<br><input type="email" placeholder="Email" name="em" class="l1" formControlName="email"><br><br>
-
-<input type="number" placeholder="Contact Number" name="cont" class="l1" formControlName="number"><br><br>
+</div><br>
+<span *ngIf="gender.invalid " id="alert">Gender is required</span>
+<input type="email" placeholder="Email" name="em" class="l1" formControlName="email"><br>
+<span *ngIf="email.invalid && email.touched" id="alert">Email is required</span><br>
+<input type="number" placeholder="Contact Number" name="cont" class="l1" formControlName="number"><br>
+<span *ngIf="number.invalid && number.touched" id="alert">Contact number is required</span><br>
 <input type="text" placeholder="Message" name="mes" class="l1" formControlName="message"><br><br>
-<button type="submit" >Submit</button>
+<button type="submit" [disabled]="!angForm.valid" >Submit</button>
 </form>
 </div>

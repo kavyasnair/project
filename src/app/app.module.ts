@@ -7,6 +7,7 @@ import { FormComponent } from './form/form.component';
 import { FormnComponent } from './formn/formn.component';
 import { ListComponent } from './list/list.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UsersService } from './users.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
