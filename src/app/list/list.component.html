@@ -17,8 +17,8 @@
         <th>Message</th>
     
       </tr>
-      <tr *ngFor="let i of allUsers">
-        <td>{{i.no}}</td>
+      <tr *ngFor="let i of allUsers; index as userno">
+        <td>{{userno}}</td>
         <td>{{i.name}}</td>
         <td>{{i.gender}}</td>
         <td>{{i.email}}</td>
@@ -29,7 +29,7 @@
     </table>
     </div>
     <div class="d2">
-      <h4 id="h">Pie Chart</h4>
+      <h4>Pie Chart</h4>
       <div class="piechart">
         
     

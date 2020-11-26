@@ -13,7 +13,7 @@
   <input type="radio" id="female" name="gender"  value="female" formControlName="gender" >
   <label for="female" >Female</label>
 </div><br>
-<span *ngIf="gender.invalid " id="alert">Gender is required</span>
+<span *ngIf="gender.invalid " id="alert">Gender is required</span><br>
 <input type="email" placeholder="Email" name="em" class="l1" formControlName="email"><br>
 <span *ngIf="email.invalid && email.touched" id="alert">Email is required</span><br>
 <input type="number" placeholder="Contact Number" name="cont" class="l1" formControlName="number"><br>

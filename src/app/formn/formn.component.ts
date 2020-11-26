@@ -23,13 +23,15 @@ export class FormnComponent implements OnInit {
   get gender(){return this.angForm.get('gender')}
   get number(){return this.angForm.get('number')}
   
-onsubmit(data:any){
-  console.log(this.angForm.value);
-}
- 
 
-  constructor() {
 
+  constructor(public users:UsersService) {}
+    onsubmit(){
+      console.log(this.angForm.value);
+      this.users.setdata(this.angForm.value)
+     
+    
+     
 
   }  
     

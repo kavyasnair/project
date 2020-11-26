@@ -10,9 +10,10 @@ export class ListComponent implements OnInit {
 
   allUsers:any;
 
-  constructor(private users:UsersService) { 
+  constructor(public users:UsersService) { 
 
-    this.allUsers=users.getAllUser();
+    
+    this.allUsers=users.passdata();
     
   }
 

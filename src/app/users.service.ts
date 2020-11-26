@@ -1,11 +1,33 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
 
-  constructor() { }
+  constructor() {}
+    private data={
+      name:"",
+      gender:"",
+      email:"",
+      number:"",
+      message:""
+    };
+    
+    setdata(x:any){
+      console.log(x)
+      this.data=x;
+      this.sec.push(x);
+      
+    }
+    sec=[] as any;
+    passdata(){
+      let data=this.sec;
+      console.log(data,'from get call')
+      return data;
+    }
+   
 
   getAllUser()
   {
