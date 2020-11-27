@@ -27,7 +27,7 @@ export class FormnComponent implements OnInit {
 
   constructor(public users:UsersService) {}
     onsubmit(){
-      console.log(this.angForm.value);
+      
       this.users.setdata(this.angForm.value)
      
     

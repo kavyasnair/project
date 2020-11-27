@@ -8,18 +8,31 @@ import { FormnComponent } from './formn/formn.component';
 import { ListComponent } from './list/list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UsersService } from './users.service';
+import { ChartsModule } from 'ng2-charts';
+
+
+
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     FormnComponent,
-    ListComponent
+    ListComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartsModule
+    
+    
+    
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]

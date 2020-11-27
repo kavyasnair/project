@@ -1,25 +1,20 @@
 
-
-
-
-
 <div class="d1">
     <h4>List View</h4>
-    
     <table>
         
       <tr>
-        <th>No</th>
-        <th>Name</th>
-        <th>Gender</th>
-        <th>Email</th>
+        <th  >No</th>
+        <th (click)='Sort()'>Name</th>
+        <th (click)='Sortn()'>Gender</th>
+        <th >Email</th>
         <th>Number</th>
         <th>Message</th>
     
       </tr>
       <tr *ngFor="let i of allUsers; index as userno">
         <td>{{userno}}</td>
-        <td>{{i.name}}</td>
+        <td >{{i.name}}</td>
         <td>{{i.gender}}</td>
         <td>{{i.email}}</td>
         <td>{{i.number}}</td>
@@ -30,8 +25,15 @@
     </div>
     <div class="d2">
       <h4>Pie Chart</h4>
-      <div class="piechart">
-        
+      <div style="display: block;">
+      <!--<canvas basechart
+        [data]="pieChartData"
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType"></canvas>-->
+      
+    </div>
     
     </div> 
-    </div>
+
+    
+    
