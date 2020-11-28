@@ -50,26 +50,13 @@ export class ListComponent implements OnInit {
     }
   */}
   
-  sortByProperty(property: any){
-    return function (a: any,b: any) {
-      if(a[property]>b[property])
-      return 1;
-      else if(a[property]<b[property])
-      return -1;
-
-      return 0;
-
-      
-    }
-  }
-  Sort(){
-    this.allUsers.sort(this.sortByProperty("name"));
-    
-  }
-  Sortn(){
-    this.allUsers.sort(this.sortByProperty("gender"));
-    
-  }
   
+  key:string='no';
+  reverse:boolean=false;
+  sort(key: string){
+    this.key=key;
+    this.reverse=!this.reverse;
+
+  }
 
 }

@@ -9,6 +9,8 @@ import { ListComponent } from './list/list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UsersService } from './users.service';
 import { ChartsModule } from 'ng2-charts';
+import { Ng2OrderModule } from 'ng2-order-pipe';
+
 
 
 
@@ -29,7 +31,8 @@ import { ChartsModule } from 'ng2-charts';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    ChartsModule
+    ChartsModule,
+    Ng2OrderModule,
     
     
     

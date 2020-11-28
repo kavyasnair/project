@@ -4,15 +4,15 @@
     <table>
         
       <tr>
-        <th  >No</th>
-        <th (click)='Sort()'>Name</th>
-        <th (click)='Sortn()'>Gender</th>
+        <th (click)="sort('no')">No&nbsp;<i class="fa fa-sort"></i></th>
+        <th (click)="sort('name')">Name&nbsp;<i class="fa fa-sort"></i></th>
+        <th >Gender</th>
         <th >Email</th>
         <th>Number</th>
         <th>Message</th>
     
       </tr>
-      <tr *ngFor="let i of allUsers; index as userno">
+      <tr *ngFor="let i of allUsers | orderBy: key: reverse; index as userno">
         <td>{{userno}}</td>
         <td >{{i.name}}</td>
         <td>{{i.gender}}</td>
