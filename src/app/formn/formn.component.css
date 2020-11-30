@@ -20,7 +20,7 @@ input{
     
 
 }
-.radiobotton1{
+.radiobutton1{
     width: 80px;
     height: 25px;
     margin-left: 40px;
@@ -28,7 +28,7 @@ input{
     font-size: 15px;
     border: 1px solid rgb(120,120,120);
 }
-.radiobotton2{
+.radiobutton2{
 
     width: 80px;
     height: 25px;
