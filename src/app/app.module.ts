@@ -10,6 +10,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { UsersService } from './users.service';
 import { ChartsModule } from 'ng2-charts';
 import { Ng2OrderModule } from 'ng2-order-pipe';
+import { AuthModule } from './auth/auth.module';
+import {AuthGuard} from './auth.guard';
+import {AuthsService} from './auths.service';
+
+
+
+
 
 
 
@@ -33,11 +40,13 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
     ReactiveFormsModule,
     ChartsModule,
     Ng2OrderModule,
+    AuthModule,
+    
     
     
     
   ],
-  providers: [UsersService],
+  providers: [UsersService,AuthGuard,AuthsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

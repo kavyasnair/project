@@ -1,0 +1,48 @@
+<div class="formdiv">
+    <h3>Register</h3>
+    <hr >
+    <form [formGroup]='regForm'>
+
+    <div class="container1">
+
+    <label for="uname"><b>Email:</b></label><br><br>
+
+    <input type="email" placeholder="Email" name="email"  formControlName="ema"><br>
+    
+    <span *ngIf="!ema.valid && ema.touched " class="alert">
+
+      <span *ngIf="ema.hasError('required')">
+        Email is required
+      </span>
+
+      <span *ngIf="ema.hasError('email')">
+        Please provide valid email
+    
+      </span>
+
+    </span>
+    <br>
+    </div>
+
+    <div class="container1">
+
+    <label for="uname"><b>Password:</b></label><br><br>
+
+    <input type="password" placeholder="Password" name="password"  formControlName="pas" ><br>
+
+    <span *ngIf="!pas.valid && pas.touched " class="alert">Password is required</span><br>
+    
+    </div>
+    
+    <button type="submit" >Register Now</button><br><br>
+
+    <div class="link" ><a routerLink=""  href="#">Already have an account?Sign in</a></div>
+
+    </form>
+
+    </div>
+
+
+
+
+

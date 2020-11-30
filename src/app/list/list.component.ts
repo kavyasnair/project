@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SortingPipe } from '../sorting.pipe';
 import {UsersService} from '../users.service';
-
+import {ChartOptions,ChartType} from 'chart.js';
+import { Label } from 'ng2-charts';
 
 @Component({
   selector: 'app-list',
@@ -9,20 +10,35 @@ import {UsersService} from '../users.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-
-  /*public pieChartLabels=['male','female'];
-  public pieChartData : any=[{
-    data:[]
-  }];*/
-
+/*pie chart*/
   allUsers:any;
+  pieChartOptions:ChartOptions= {
+    responsive:true,
+    
+    
+  };
 
-  /*public pieChartType='pie'
+  pieChartLabels: Label[] = ['female','male'];
+ 
+  pieChartType: ChartType= 'pie';
+  pieChartColors=[
+    {
+      backgroundColor:['rgba(30,144,255)','rgba(0,0,0)']
+    }
+  ]
+  
+  pieChartPlugins= [];
+  pieChartData: any=[
+    {
+      allUsers:[]
+    }
+  ];
+  
+  female=0
+  male=0
+  
 
-  all: any
-  fe=0
-  mal=0
-  UsersService: any;*/
+  
 
   constructor(public users:UsersService) { 
 
@@ -30,26 +46,32 @@ export class ListComponent implements OnInit {
     
     this.allUsers=users.passdata();
     
+    
+    
+    
   }
-
+/*Count*/
   ngOnInit(): void {
-
-    /*this.UsersService.passdata();{
-      this.all=data
-      this.all.forEach((item: any,i: any)=>{
-        if(item.gender=="fe"){
-          this.fe=this.fe +1
+    
+    
+      this.allUsers.forEach((item: any,i: any)=>{
+        item.no=i+1;
+      });
+      this.allUsers.forEach((item: any,i: any)=>{
+        if(item.gender=="female"){
+          this.female=this.female +1
         }
-        if(item.gender=="mal"){
-          this.mal=this.mal +1
+        if(item.gender=="male"){
+          this.male=this.male +1
         }
-      })
-      this.allUsers=this.all
-      this.pieChartData=[this.fe,this.mal]
-      console.log(this.fe)
+      });
+      
+      this.pieChartData=[this.female,this.male]
+      
     }
-  */}
   
+ 
+  /*Sorting*/
   
   key:string='no';
   reverse:boolean=false;

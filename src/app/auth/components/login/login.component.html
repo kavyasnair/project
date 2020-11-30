@@ -1,0 +1,46 @@
+
+
+<div class="formdiv">
+    <h3>LOGIN</h3>
+    <hr >
+    <form [formGroup]='loginForm'>
+
+    <div class="container1">
+
+    <label for="uname"><b>Email:</b></label><br><br>
+
+    <input type="email" placeholder="Email" name="email"  formControlName="ema" [(ngModel)]="email"><br>
+    
+    <span *ngIf="!ema.valid && ema.touched " class="alert">
+
+      <span *ngIf="ema.hasError('required')">
+        Email is required
+      </span>
+
+      <span *ngIf="ema.hasError('email')">
+        Please provide valid email
+    
+      </span>
+
+    </span>
+    <br>
+    </div>
+
+    <div class="container1">
+
+    <label for="uname"><b>Password:</b></label><br><br>
+
+    <input type="password" placeholder="Password" name="password"  formControlName="pas" [(ngModel)]="password"><br>
+
+    <span *ngIf="!pas.valid && pas.touched " class="alert">Password is required</span><br>
+    
+    </div>
+    
+    <button type="submit" (click)="login()">Login</button><br><br>
+
+    <div class="link" ><a routerLink="/register"  href="#">Do not have an account?Sign Up here</a></div>
+
+    </form>
+
+    </div>
+    

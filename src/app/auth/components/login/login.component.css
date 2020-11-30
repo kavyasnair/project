@@ -1,0 +1,61 @@
+
+h3{
+    color: blue;
+}
+.formdiv{
+
+    border: 1px solid blue;
+    border-radius: 15px;
+    background-color: white;
+    text-align: center;
+    font-family: monospace;
+    font-size: 20px;
+    margin-left: 500px;
+    margin-top: 40px;
+    width: 400px;
+    height: 370px;
+    
+}
+
+
+hr{
+    border-color: blue;
+    width: 60%;
+    
+}
+
+
+button{
+    
+    border: none;
+    border-radius: 25px;
+    padding: 6px 50px;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    background-color: blue;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+input{
+
+    border-radius: 5px;
+    border-color: blue;
+    padding: 5px;
+}
+
+.link{
+
+    font-size: 12px;
+
+}
+
+a:link{
+    text-decoration: none;
+    color: blue;
+}

@@ -1,4 +1,4 @@
-.s1{
+.main{
     border: 1px solid rgb(120,120,120);
     border-radius: 15px;
     background-color: white;
@@ -12,7 +12,7 @@
     height: 400px;
     
 }
-.l1{
+input{
     border-top: none;
     border-left: none;
     border-right: none;
@@ -20,7 +20,7 @@
     
 
 }
-.da{
+.radiobotton1{
     width: 80px;
     height: 25px;
     margin-left: 40px;
@@ -28,7 +28,8 @@
     font-size: 15px;
     border: 1px solid rgb(120,120,120);
 }
-.db{
+.radiobotton2{
+
     width: 80px;
     height: 25px;
     position: absolute;
@@ -36,7 +37,10 @@
     font-size: 15px;
     margin-left:128px;
 }
-button{border: none;
+
+button{
+    
+    border: none;
     border-radius: 25px;
     padding: 6px 42px;
     display: inline-block;
@@ -50,8 +54,3 @@ button{border: none;
     text-decoration: none;
 }
 
-#alert{
-    font-size: 11px;
-    margin-top: 50px;
-    color: red;
-}

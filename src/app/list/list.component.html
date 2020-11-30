@@ -1,5 +1,5 @@
 
-<div class="d1">
+<div class="div1">
     <h4>List View</h4>
     <table>
         
@@ -10,10 +10,10 @@
         <th >Email</th>
         <th>Number</th>
         <th>Message</th>
-    
-      </tr>
-      <tr *ngFor="let i of allUsers | orderBy: key: reverse; index as userno">
-        <td>{{userno}}</td>
+    </tr>
+
+      <tr *ngFor="let i of allUsers | orderBy: key: reverse">
+        <td><b>{{i.no}}</b></td>
         <td >{{i.name}}</td>
         <td>{{i.gender}}</td>
         <td>{{i.email}}</td>
@@ -23,13 +23,18 @@
       
     </table>
     </div>
-    <div class="d2">
+    <div class="divpiechart">
       <h4>Pie Chart</h4>
-      <div style="display: block;">
-      <!--<canvas basechart
+     <!--***Piechart***-->
+      <div class="piechart">
+      <canvas baseChart
         [data]="pieChartData"
         [labels]="pieChartLabels"
-        [chartType]="pieChartType"></canvas>-->
+        [colors]="pieChartColors"
+        [chartType]="pieChartType"
+        [options]="pieChartOptions"
+        [plugins]="pieChartPlugins">
+      </canvas>
       
     </div>
     

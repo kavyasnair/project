@@ -2,3 +2,8 @@
 body{
     background-color: lightblue;
 }
+.alert{
+    font-size: 11px;
+    margin-top: 50px;
+    color: red;
+}

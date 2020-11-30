@@ -1,4 +1,4 @@
-.full{
+.main{
     
     background-color: rgb(240, 240, 240);
 }
@@ -28,21 +28,21 @@
     width: auto;
     float: right;
 }
-#f1
+#listview
 {
     font-size: 68px;
     color: indianred;
     padding-top: 13px;
     padding-left: 120px;
 }
-#f2
+#formview
 {
     font-size: 60px;
     color: mediumseagreen;
     padding-top: 19px;
     padding-left: 120px;
 }
-.but{
+.button{
     border: none;
     border-radius: 25px;
     padding: 8px 42px;
@@ -51,7 +51,7 @@
     cursor: pointer;
     outline: none;
 }
-.but1{
+.button1{
     background-color: indianred;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
@@ -59,7 +59,7 @@
     text-align: center;
     text-decoration: none;
 }
-.but2{
+.button2{
     border: none;
     background-color: mediumseagreen;
     margin: 22px 80px;

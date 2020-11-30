@@ -1,31 +1,47 @@
 <!--Form component-->
 
-<div class="s1">
+<div class="main">
 <h3>Form</h3>
 <form  [formGroup]='angForm' (ngSubmit)='onsubmit()'>
 
-<input type="text" placeholder="Name" class="l1" formControlName="name" required><br>
-<span *ngIf="!name.valid " id="alert">Name is required</span><br>
+<input type="text" placeholder="Name"  formControlName="name" required><br>
+<span *ngIf="!name.valid && name.touched " class="alert">Name is required</span><br>
 
-<div class="da">
+
+<div class="radiobotton1">
 <input type="radio" id="male" name="gender" value="male" formControlName="gender">
   <label for="male" >Male</label>
 </div>
 
-<div class="db" >
+<div class="radiobotton2" >
   <input type="radio" id="female" name="gender"  value="female" formControlName="gender" >
   <label for="female" >Female</label>
 </div><br>
-<span *ngIf="!gender.valid " id="alert">Gender is required</span><br>
 
-<input type="email" placeholder="Email" name="em" class="l1" formControlName="email"><br>
-<span *ngIf="!email.valid " id="alert">Email is required</span><br>
+<span *ngIf="!gender.valid && gender.touched " class="alert">Gender is required</span><br>
 
-<input type="number" placeholder="Contact Number" name="cont" class="l1" formControlName="number"><br>
-<span *ngIf="!number.valid " id="alert">Contact number is required</span><br>
+<input type="email" placeholder="Email" name="em"  formControlName="email"><br>
+<span *ngIf="!email.valid && email.touched " class="alert">
+  <span *ngIf="email.hasError('required')">
+    Email is required
+</span>
+<span *ngIf="email.hasError('email')">
+  Please provide valid email
 
-<input type="text" placeholder="Message" name="mes" class="l1" formControlName="message"><br><br>
+</span>
+</span><br>
+
+<input type="number" placeholder="Contact Number" name="cont"  formControlName="number"><br>
+<span *ngIf="!number.valid && number.touched" class="alert">
+  <span *ngIf="number.hasError('required')">
+     Contact number required
+</span>
+
+</span><br>
+
+<input type="text" placeholder="Message" name="mes" formControlName="message"><br><br>
 
 <button type="submit" [disabled]="!angForm.valid" >Submit</button>
+
 </form>
 </div>
